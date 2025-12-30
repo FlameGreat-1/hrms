@@ -1,4 +1,3 @@
-
 # HRMS - Human Resource Management System
 
 Laravel 11 HRMS application with employee, department, and skill management.
@@ -11,16 +10,14 @@ Laravel 11 HRMS application with employee, department, and skill management.
 
 # 1. Clone repository
 git clone https://github.com/FlameGreat-1/hrms
+
 cd hrms
 
-# 2. Environment file
-
-Create .env file 
-
-copy .env.example into .env and update API_KEY
+# 2. Copy environment file
+cp .env.example .env
 
 # 3. Install and start application (One Command)
-docker run --rm -u "$(id -u):$(id -g)" -v "$(pwd):/var/www/html" -w /var/www/html laravelsail/php83-composer:latest composer install --ignore-platform-reqs && ./vendor/bin/sail up -d && sleep 15 && ./vendor/bin/sail artisan key:generate && ./vendor/bin/sail artisan session:table && ./vendor/bin/sail artisan cache:table && ./vendor/bin/sail artisan migrate --seed && ./vendor/bin/sail npm install && ./vendor/bin/sail npm run build
+docker run --rm -u "$(id -u):$(id -g)" -v "$(pwd):/var/www/html" -w /var/www/html laravelsail/php83-composer:latest composer install --ignore-platform-reqs && ./vendor/bin/sail up -d && sleep 15 && ./vendor/bin/sail artisan key:generate && ./vendor/bin/sail artisan migrate --seed && ./vendor/bin/sail npm install && ./vendor/bin/sail npm run build
 
 # 4. Access application
 # http://localhost
@@ -37,4 +34,3 @@ Password: admin123hrms
 # Restart Application
 
 ./vendor/bin/sail up -d
-
