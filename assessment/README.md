@@ -19,6 +19,8 @@ cp .env.example .env
 # 3. Install and start application (One Command)
 docker run --rm -u "$(id -u):$(id -g)" -v "$(pwd):/var/www/html" -w /var/www/html laravelsail/php83-composer:latest composer install --ignore-platform-reqs && ./vendor/bin/sail up -d && sleep 15 && ./vendor/bin/sail artisan key:generate && ./vendor/bin/sail artisan migrate --seed && ./vendor/bin/sail npm install && ./vendor/bin/sail npm run build
 
+**Note:** First-time setup takes approximately 8-12 minutes depending on your internet speed.
+
 # 4. Access application
 # http://localhost
 
