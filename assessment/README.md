@@ -11,7 +11,7 @@ Laravel 11 HRMS application with employee, department, and skill management.
 # 1. Clone repository
 git clone https://github.com/FlameGreat-1/hrms
 
-cd hrms
+cd hrms/assessment
 
 # 2. Copy environment file
 cp .env.example .env
